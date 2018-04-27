@@ -1,0 +1,3 @@
+table_add table0_control.table0 set_egress_port 2&&&2 0&&&0 0&&&0 0x0800&&&0xFFFF 10.0.7.7&&&0xFFFFFFFF 10.0.4.4&&&0xFFFFFFFF 0&&&0 0&&&0 0&&&0 => 1 0
+table_add process_int_transit.tb_int_insert process_int_transit.int_transit 0 => 4
+table_add process_int_transit.tb_int_inst_0003 process_int_transit.int_set_header_0003_i8 8 0
