@@ -1,6 +1,6 @@
 table_add table0_control.table0 set_egress_port 1&&&1 0&&&0 0&&&0 0x0800&&&0xFFFF 10.0.1.1&&&0xFFFFFFFF 10.0.3.3&&&0xFFFFFFFF 0&&&0 0&&&0 0&&&0 => 2 0
 table_add process_set_source_sink.tb_set_source_sink process_set_source_sink.int_set_source 10.0.1.1&&&0xFFFFFFFF 10.0.3.3&&&0xFFFFFFFF 0&&&0 0&&&0 0 0
-table_add process_int_source.tb_int_source process_int_source.int_source_dscp 10.0.1.1&&&0xFFFFFFFF 10.0.3.3&&&0xFFFFFFFF 0&&&0 0&&&0 => 32 1 8 0 0
+table_add process_int_source.tb_int_source process_int_source.int_source_dscp 10.0.1.1&&&0xFFFFFFFF 10.0.3.3&&&0xFFFFFFFF 0&&&0 0&&&0 => 32 8 15 15 0
 table_add process_int_transit.tb_int_insert process_int_transit.int_transit 0 => 1
-table_add process_int_transit.tb_int_inst_0003 process_int_transit.int_set_header_0003_i8 8 0
-
+table_add process_int_transit.tb_int_inst_0003 process_int_transit.int_set_header_0003_i15 15 0
+table_add process_int_transit.tb_int_inst_0407 process_int_transit.int_set_header_0407_i15 15 0
